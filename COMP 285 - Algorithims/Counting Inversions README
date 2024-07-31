@@ -1,26 +1,29 @@
 
-
 # Merge Sort and Inversion Counting Script
 
-This Python script demonstrates the application of the merge sort algorithm to count the number of inversions in a given list of integers. An inversion occurs when a pair of elements in the list are out of order, meaning the earlier element is greater than the later element.
+This Python script demonstrates an efficient algorithm for counting the number of inversions in an array using a modified version of the merge sort algorithm. An inversion in an array `A` is a pair of indices `(i, j)` such that `i < j` and `A[i] > A[j]`. The script reads arrays of integers from an input file named `"Counting_Inversions_input.txt"`, counts the number of inversions in each array, and prints both the array and the count of inversions.
 
 ## Features
 
-- **Merge Sort Algorithm**: Implements the merge sort algorithm, a divide-and-conquer sorting technique that divides the input list into two halves, sorts them separately, and then merges them. This process is recursively applied until the entire list is sorted.
+- **Merge Sort Algorithm**: Utilizes a divide-and-conquer strategy to efficiently sort an array. It divides the array into two halves, recursively sorts them, and then merges them.
+- **Inversion Counting**: During the merge process, the algorithm also counts the number of inversions in the array. This is achieved by comparing elements across the divided halves.
+- **File Input**: Reads arrays of integers from a text file, where each line represents a separate array.
+- **Output**: Prints the original array and the number of inversions found in it.
 
-- **Inversion Counting**: While sorting the list using merge sort, the script also counts the number of inversions present in the original unsorted list. An inversion is defined as a pair `(i, j)` such that `i < j` and `A[i] > A[j]`.
+## How It Works
 
-- **File Input**: Reads input arrays from a file named `"Counting_Inversions_input.txt"`, where each line represents a separate array of integers. Each integer in the array is separated by a comma.
+The script defines two main functions: `merge()` and `merge_sort_and_count_inversions()`. 
+
+- `merge()`: Merges two sorted subarrays (`A[left..mid]` and `A[mid+1..right]`) and counts the number of inversions during the merge process.
+- `merge_sort_and_count_inversions()`: Recursively applies merge sort on the array and accumulates the inversion counts from both the recursive calls and the merge operation.
+
+After defining these functions, the script reads input arrays from `"Counting_Inversions_input.txt"`, applies the merge sort and inversion counting algorithm on each array, and prints the results.
 
 ## Usage
 
-1. Prepare the input file `"Counting_Inversions_input.txt"` with arrays of integers, one array per line. Separate integers within an array by commas.
+Ensure you have Python installed on your system. Place the input file `"Counting_Inversions_input.txt"` in the same directory as the script. Each line in the input file should represent an array of integers separated by commas. Run the script using a Python interpreter. The script will output the arrays and their corresponding inversion counts to the console.
 
-2. Run the script. It will read each line from the input file, sort the array using merge sort, count the number of inversions, and print both the sorted array and the inversion count.
-
-## Example Input and Output
-
-Given the input file content:
+Example content of `"Counting_Inversions_input.txt"`:
 
 ```
 1,9,6,4
@@ -28,7 +31,7 @@ Given the input file content:
 1,9,6
 ```
 
-The script outputs:
+Output:
 
 ```
 Array: [1, 9, 6, 4]
@@ -39,6 +42,3 @@ Array: [1, 9, 6]
 Number of inversions: 2
 ```
 
-## Conclusion
-
-This script serves as an educational tool for understanding merge sort and its application in counting inversions within a list. It combines algorithmic principles with practical file handling in Python, offering insights into efficient sorting techniques and their analysis.
