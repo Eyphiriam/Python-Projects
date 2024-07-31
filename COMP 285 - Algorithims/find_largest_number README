@@ -41,6 +41,3 @@ Array: 42, 5, 15
 Max: 42
 ```
 
-## Conclusion
-
-This script serves as an educational tool for understanding alternative approaches to common problems, such as finding the maximum value in a list, without relying on built-in functions. It demonstrates the application of algorithmic thinking and problem-solving skills in Python programming.
