@@ -1,0 +1,46 @@
+
+# Maximum Number Finder Script
+
+This Python script is designed to find the maximum number in a given array of integers without using built-in Python functions to find the maximum value. Instead, it employs a custom algorithm inspired by binary search principles to efficiently locate the largest number.
+
+## Features
+
+- **Custom Maximum Number Finder**: Implements a unique algorithm to identify the maximum number in an array. This method avoids the straightforward use of Python's built-in `max()` function, offering an educational insight into alternative problem-solving techniques.
+
+- **Binary Search Inspired Approach**: Although not a traditional binary search (since it's not searching for a specific value), the algorithm uses a divide-and-conquer strategy reminiscent of binary search to narrow down the search space for the maximum number.
+
+- **File Input Handling**: Reads input arrays from a file named `"find_largest_number_input.txt"`, where each line contains a separate array of integers. Integers within an array are separated by commas.
+
+## Usage
+
+1. Prepare the input file `"find_largest_number_input.txt"` with arrays of integers, one array per line. Separate integers within an array by commas.
+
+2. Run the script. It will read each line from the input file, identify the maximum number in the array using the custom algorithm, and print both the array and the found maximum number.
+
+## Example Input and Output
+
+Given the input file content:
+
+```
+35,42,5,15,27,29
+27,29,35,42,4,15
+35,42,4,15
+42,5,15
+```
+
+The script outputs:
+
+```
+Array: 35, 42, 5, 15, 27, 29
+Max: 42
+Array: 27, 29, 35, 42, 4, 15
+Max: 42
+Array: 35, 42, 4, 15
+Max: 42
+Array: 42, 5, 15
+Max: 42
+```
+
+## Conclusion
+
+This script serves as an educational tool for understanding alternative approaches to common problems, such as finding the maximum value in a list, without relying on built-in functions. It demonstrates the application of algorithmic thinking and problem-solving skills in Python programming.
