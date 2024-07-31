@@ -1,0 +1,58 @@
+
+# Movie Studio Release Schedule Manager
+
+This Python script simulates a movie studio release schedule manager. It allows users to manage movies, including adding new movies, scheduling premieres, postponing releases, and viewing summaries of the release schedule. The script uses classes to represent movies, dates, and the release schedule, demonstrating object-oriented programming principles.
+
+## Features
+
+- **Movie Management**: Users can add movies to the studio's lineup, specifying the movie's title and genre.
+  
+- **Release Scheduling**: Movies can be scheduled for premiere dates, and users can postpone premieres by adjusting the release date.
+  
+- **Error Handling**: Includes custom error handling for scenarios where a movie cannot be found or postponed.
+  
+- **Summary Reports**: Generates summary reports of the studio's release schedule, including the number of movies scheduled and those yet to be scheduled.
+  
+- **Interactive Interface**: Provides an interactive interface for users to manage the release schedule, with prompts guiding actions.
+
+## Classes Overview
+
+- **`Movie` Class**: Represents a movie with attributes for title and genre. Includes a string representation method for easy printing.
+  
+- **`Date` Class**: Represents a date with attributes for month, day, and year. Includes a string representation method for formatting dates.
+  
+- **`ReleaseSchedule` Class**: Manages the release schedule for a movie studio. Includes methods for adding movies, scheduling premieres, postponing releases, and displaying summaries and schedules.
+  
+- **`MovieNotFoundError` Class**: A custom exception class for handling scenarios where a movie is not found in the schedule.
+
+## Usage
+
+1. Run the script. You will be prompted to enter the name of your studio and the season for which you have a schedule.
+   
+2. Follow the interactive prompts to add movies, schedule premieres, postpone releases, view summaries, or finish managing the schedule.
+
+3. The script will guide you through each action, asking for necessary information such as movie names, genres, and dates.
+
+## Example Interaction Flow
+
+1. **Studio Setup**:
+   - Enter "DreamWorks" as the studio name and "Summer" as the season.
+   
+2. **Adding Movies**:
+   - Choose action 1 to add a movie.
+   - Enter "Shrek" as the movie name and "Animation" as the genre.
+   
+3. **Scheduling Premieres**:
+   - Choose action 2 to schedule a premiere.
+   - Enter "Shrek" as the movie name and "06-15-21" as the date.
+   
+4. **Postponing Releases**:
+   - Choose action 3 to postpone a movie premiere.
+   - Enter "Shrek" as the movie name.
+   
+5. **Viewing Summaries**:
+   - Choose action 4 to view a company summary.
+   
+6. **Finishing Session**:
+   - Choose action 5 to finish managing the schedule.
+
